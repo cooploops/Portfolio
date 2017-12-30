@@ -1,0 +1,14 @@
+nav{
+    -webkit-transition:background 0.5s;
+}
+
+nav a{
+    color:white;
+    &:hover{
+        color:$blue;
+    }
+}
+
+nav:hover{
+    background:rgba(255,255,255,0.1)
+}

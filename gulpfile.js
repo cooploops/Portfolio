@@ -43,6 +43,13 @@ gulp.task('minify-css', ['sass'], function() {
     }))
 });
 
+gulp.task('compileJS', function(){
+  gulp.src('js.index.js')
+  .pipe(browserSync.reload({
+    stream:true
+  }))
+});
+
 // Copy vendor files from /node_modules into /vendor
 // NOTE: requires `npm install` before running!
 gulp.task('copy', function() {
@@ -94,9 +101,10 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css'], function() {
+gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'compileJS'], function() {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('css/*.css', ['minify-css']);
+  gulp.watch('js/*.js', ['compileJS']);
   // Reloads the browser whenever HTML files change
   gulp.watch('*.html', browserSync.reload);
 });

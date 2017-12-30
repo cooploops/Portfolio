@@ -6,6 +6,13 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+.space {
+  background: url("../img/spacexpansion.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 h1,
 h2,
 h3,
@@ -17,12 +24,6 @@ h6 {
 
 header.masthead {
   position: relative;
-  background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem; }
   header.masthead .overlay {
@@ -43,7 +44,9 @@ header.masthead {
         font-size: 3rem; } }
 
 .showcase .showcase-text {
-  padding: 1rem; }
+  background: url("../img/ep_naturalblack.png");
+  padding: 1rem;
+  color: white; }
 
 .showcase .showcase-img {
   min-height: 30rem;
@@ -77,11 +80,6 @@ header.masthead {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../img/bg-masthead.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem; }
   .call-to-action .overlay {
@@ -96,3 +94,14 @@ header.masthead {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem; }
+
+nav {
+  -webkit-transition: background 0.5s; }
+
+nav a {
+  color: white; }
+  nav a:hover {
+    color: #007bff; }
+
+nav:hover {
+  background: rgba(255, 255, 255, 0.1); }

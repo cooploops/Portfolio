@@ -1,5 +1,11 @@
 body {
   @include body-font;
+  // background: url('../img/ep_naturalblack.png')
+}
+
+.space{
+  background: url('../img/spacexpansion.jpg') no-repeat center center;
+  @include background-cover;
 }
 
 h1,
