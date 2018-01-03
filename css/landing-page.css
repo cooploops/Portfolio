@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Landing Page v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/landing-page)
- * Copyright 2013-2017 Start Bootstrap
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
 body {
@@ -96,7 +96,9 @@ footer.footer {
   padding-bottom: 4rem; }
 
 nav {
-  -webkit-transition: background 0.5s; }
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s; }
 
 nav a {
   color: white; }
