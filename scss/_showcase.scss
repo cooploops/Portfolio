@@ -6,7 +6,9 @@
   }
   .showcase-img {
     min-height: 30rem;
-    background-size: cover;
+    background-size: contain, cover;
+    background-position:center;
+    background-repeat: no-repeat;
   }
   @media (min-width: 768px) {
     .showcase-text {

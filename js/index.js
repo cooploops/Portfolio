@@ -1,22 +1,17 @@
-$(document).ready(function(){
+const left = $(".left");
+const right = $(".right");
+const landing = $(".landing");
 
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
-
-    let blinker = $("#blink");
-    function blinking (){
-        if(blinker.css("visibility") === "visible"){
-            blinker.css("visibility", "hidden")
-        } else {
-            blinker.css("visibility", "visible");
-            blinker.css("color", getRandomColor());
-        }
+left.hover(function(){
+    landing.addClass("hover-left")},
+    function(){
+    landing.removeClass("hover-left")
     }
-    setInterval(blinking, 520);
-});
+);
+
+right.hover(function(){
+    landing.addClass("hover-right")}, 
+    function(){
+        landing.removeClass("hover-right")
+    }
+);
