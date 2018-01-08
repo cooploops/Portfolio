@@ -1,6 +1,6 @@
     $(document).ready(function(){
 
-        function getRandomColor() {
+        const getRandomColor = function() {
             var letters = '0123456789ABCDEF';
             var color = '#';
             for (var i = 0; i < 6; i++) {
@@ -9,31 +9,35 @@
             return color;
           }
     
-        let blinker = $("#blink");
-        function blinking (){
+        function blinking(){
+            const blinker = $("#blink");
+            console.log("hi");
             if(blinker.css("visibility") === "visible"){
                 blinker.css("visibility", "hidden")
             } else {
                 blinker.css("visibility", "visible");
                 blinker.css("color", getRandomColor());
             }
+            setTimeout(blinking, 520);
         }
-        setInterval(blinking, 520);
 
-        // let speed = 100;
-        // let txt = `Hi I'm, TJ`;
-        // let iterator = 0;
 
-        // function typeWrite(){
-            
-        //     if(iterator < txt.length){
-        //         document.getElementById("hi").innerHTML += txt.charAt(iterator);
-        //         iterator++;
-        //         setTimeout(typeWrite, speed);
-        //     }
-        // }
-        // typeWrite();
-        // setTimeout(setInterval(blinking, 520), 105);
 
+        let txt = `Hi, I'm TJ`;
+        let j = 0;
+        const speed = 110;
+        
+        const typeWriter = function() {
+          if (j < txt.length) {
+            document.getElementById("hi").innerHTML += txt.charAt(j);
+            j++;
+            setTimeout(typeWriter, speed);
+          } else {
+            clearTimeout();
+            $("#hi").append("<span id='blink'>|</span>");
+            setTimeout(blinking, 520);
+          }
+        }
+        typeWriter();
     });
 
