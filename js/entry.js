@@ -11,7 +11,6 @@
     
         function blinking(){
             const blinker = $("#blink");
-            console.log("hi");
             if(blinker.css("visibility") === "visible"){
                 blinker.css("visibility", "hidden")
             } else {
